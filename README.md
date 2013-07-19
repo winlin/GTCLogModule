@@ -3,7 +3,15 @@ GTCLogModule
 
 This log module can be used by C/C++/Objective-C projects. 
 
-Easily change stdout/stderr  between files with thread-safe. 
+## Features
+* high robustness and proformace
+* process/thread safe;
+* high configurable, include buffer size, log file numbers, log file size etc;
+* three default log level and easily to expand;
+* print buffer to reduce disk I/O times;
+* easily change stdout/stderr between log file just according to a #define macro;
+* detial document comments
+
 
 ![](test_pic.png)
 ![](log_files.jpg)
@@ -33,3 +41,5 @@ It's very simple, you can learn from the test.c file.
     // at last you should close the log module
     MITLogClose();
 ```
+
+[Winlin](http://blog.csdn.net/pcliuguangtao)
