@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include "MITLogModule.h"
+#include "mit_log_module.h"
 
 
 void *tFucOne(void *arg);
@@ -20,7 +20,7 @@ void *tFuncTwo(void *arg);
 
 int main(int argc, const char * argv[])
 {
-    MITLogOpen("TestApp", "./logs");
+    MITLogOpen("TestApp", "./logs", _IOLBF);
     
     char dir[1024];
     getcwd(dir, sizeof(dir));
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[])
     MITLogClose();
     
     // 2. test the thread safe
-    MITLogOpen("ThreadTest", "./logs/");
+    MITLogOpen("ThreadTest", "./logs/", _IOLBF);
     puts("start thread safe test: two thread write into ThreadTest.comm for 10000 times");
     pthread_t oneThread, twoThread;
     int ret = 0;
@@ -63,7 +63,7 @@ int main(int argc, const char * argv[])
     
     // 3. test the process safe
     puts("start process safe test: two process write into ProcessTest.comm for 10000 times");
-    MITLogOpen("ProcessTest", "./logs");
+    MITLogOpen("ProcessTest", "./logs", _IOLBF);
     
     pid_t pid;
     pid = fork();
