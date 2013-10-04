@@ -17,8 +17,8 @@ This log module can be used by C/C++/Objective-C projects.
 ![](log_files.jpg)
 
 ## Usage 
-It's very simple, you can learn from the test.c file.
-The fellow content uses self buffer:
+It's very simple, you can learn from the test.c file. 
+The example just uses self buffer:
 ```
     MITLogOpen("TestApp", "./logs");
     
