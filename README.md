@@ -18,6 +18,7 @@ This log module can be used by C/C++/Objective-C projects.
 
 ## Usage 
 It's very simple, you can learn from the test.c file.
+The fellow content uses self buffer:
 ```
     MITLogOpen("TestApp", "./logs");
     
